@@ -1,0 +1,90 @@
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" href="form.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script src="http://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js"></script>
+<script src="http://cdn.jsdelivr.net/jquery.validation/1.15.0/additional-methods.min.js"></script>
+<script src="http://www.parsecdn.com/js/parse-1.2.18.min.js"></script>
+<script src="form.js"></script>
+
+
+<form id="quoteForm" class="form-basic">
+  <div class="form-title-row">
+    <h1>Quote Details</h1>
+  </div>
+
+  <div class="form-row">
+    <label>
+      <span>Select a category</span>
+      <select id="category" name="dropdown" onchange="updateSubCategories()" required>
+      </select>
+    </label>
+  </div>
+
+  <div class="form-row">
+    <label>
+      <span>Select a sub category</span>
+      <select id="subCategory" name="dropdown">
+      </select>
+    </label>
+  </div>
+
+  <div class="form-row">
+    <label>
+      <span>Be as descriptive as possible</span>
+      <textarea id="description" name="textarea" required></textarea>
+    </label>
+  </div>
+
+  <div class="form-row">
+    <label>
+      <span>Current Quote</span>
+      <input type="text" id="budget" placeholder="" name="quote" style="vertical-align:bottom;" required>
+    </label>
+  </div>
+
+  <div class="form-row">
+    <label>
+      <span>Start Date</span>
+      <input id="datepicker" name="date" onfocus="this.blur()" readonly required>
+    </label>
+  </div>
+
+  <div class="form-row" style="margin-top:0;margin-bottom:0;">
+    <label>
+      <span>How can suppliers reach you?</span>
+      <input type="text" id="firstName" placeholder="First Name" name="firstName" style="vertical-align:bottom;" required>
+    </label>
+  </div>
+
+  <div class="form-row" style="margin-top:0;margin-bottom:0;">
+    <label>
+      <span></span>
+      <input type="text" id="surname" placeholder="Surname" name="surname" required>
+    </label>
+  </div>
+
+  <div class="form-row" style="margin-top:0;margin-bottom:0;">
+    <label>
+      <span></span>
+      <input type="phone" name="phone" id="phone" placeholder="Phone number">
+    </label>
+  </div>
+
+  <div class="form-row" style="margin-top:0;">
+    <label>
+      <span></span>
+      <input type="email" name="email" id="email" placeholder="Email" required>
+    </label>
+  </div>
+
+  <div class="form-row" style="text-align:center;">
+    <label>
+      <span class="terms" style="width:400px;text-align:left;">By clicking the 'Submit' button you accept our <a href="http://www.loweryourquote.com/terms/">terms and conditions</a></span>
+    </label>
+  </div>
+
+  <div class="form-row">
+    <button type="button" onclick="clicked()" value="Submit">Post Your Quote</button>
+  </div>
+</form>
